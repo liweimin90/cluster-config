@@ -156,7 +156,7 @@ def main():
                     log.info(e, exc_info=True)
 
             log.info('Pushing metrics to gateway at %s...', args.gateway)
-            push_to_gateway('118.26.192.170:31424', job="gpu-export", registry=core.REGISTRY)
+            push_to_gateway('118.26.192.170:31424', job=hostname + "gpu-export", registry=core.REGISTRY)
             log.info('Push complete.')
 
             time.sleep(5)
